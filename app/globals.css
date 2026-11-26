@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hartie: #fbf9f4;
+  --color-crem: #f4efe5;
+  --color-crem-2: #e9e1d2;
+  --color-linie: #ddd4c3;
+  --color-aur: #b8975e;
+  --color-aur-deschis: #d9bf8c;
+  --color-aur-text: #75592a;
+  --color-navy: #14233b;
+  --color-navy-2: #0d1828;
+  --color-navy-3: #1f3352;
+  --color-ink: #17202d;
+  --color-muted: #4a5466;
+  --font-serif: var(--font-cormorant), "Iowan Old Style", Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; -webkit-text-size-adjust: 100%; }
+body { background: var(--color-hartie); color: var(--color-ink); }
+::selection { background: var(--color-aur-deschis); color: var(--color-navy-2); }
+
+:focus-visible { outline: 2px solid var(--color-aur-text); outline-offset: 3px; border-radius: 2px; }
+.on-dark :focus-visible { outline-color: var(--color-aur-deschis); }
+
+.container-x { margin-inline: auto; width: 100%; max-width: 78rem; padding-inline: 1.25rem; }
+@media (min-width: 768px) { .container-x { padding-inline: 2rem; } }
+@media (min-width: 1536px) { .container-x { max-width: 84rem; } }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: .75rem;
+  font-size: .72rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--color-aur-text);
+}
+.eyebrow::before { content: ""; width: 2rem; height: 1px; background: currentColor; opacity: .7; }
+.on-dark .eyebrow { color: var(--color-aur-deschis); }
+
+.rule-gold { height: 1px; background: linear-gradient(90deg, var(--color-aur), rgb(184 151 94 / 0)); }
+
+.exemplu {
+  display: inline-block; white-space: nowrap; font-size: .72rem; font-weight: 600; letter-spacing: .04em;
+  color: var(--color-aur-text); border: 1px dashed rgb(117 89 42 / .55); border-radius: 999px; padding: .05rem .55rem;
+  background: rgb(184 151 94 / .08); vertical-align: middle;
+}
+.on-dark .exemplu { color: var(--color-aur-deschis); border-color: rgb(217 191 140 / .5); background: rgb(217 191 140 / .08); }
+
+/* Textură fină de hârtie / gravură, ca SVG mic repetat (ieftin la randare) */
+.texture {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Cpath d='M0 11h22M11 0v22' stroke='%23b8975e' stroke-opacity='.09' stroke-width='.6'/%3E%3C/svg%3E");
+  background-size: 22px 22px;
+}
+
+/* Acordeon nativ <details> */
+details > summary { list-style: none; cursor: pointer; }
+details > summary::-webkit-details-marker { display: none; }
+details .chev { transition: transform .3s ease; }
+details[open] .chev { transform: rotate(180deg); }
+
+/* Header care se micșorează la scroll */
+.site-header { transition: box-shadow .35s ease, background-color .35s ease; }
+.site-header .bar { transition: height .35s ease; height: 5rem; }
+.site-header[data-scrolled="true"] { background-color: rgb(251 249 244 / .97); box-shadow: 0 12px 30px -22px rgb(13 24 40 / .45); }
+.site-header[data-scrolled="true"] .bar { height: 4rem; }
+.site-header .mark { transition: width .35s ease, height .35s ease; }
+.site-header[data-scrolled="true"] .mark { width: 2.25rem; height: 2.25rem; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .js .reveal:not(.in) { opacity: 0; transform: translateY(16px); }
+  .js .reveal { transition: opacity .8s ease, transform .9s cubic-bezier(.2,.7,.2,1); }
+  .js .reveal-d1 { transition-delay: .08s; }
+  .js .reveal-d2 { transition-delay: .16s; }
+  .js .reveal-d3 { transition-delay: .24s; }
+
+  .card { transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease, border-color .35s ease; }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 22px 44px -28px rgb(13 24 40 / .45); border-color: var(--color-aur); }
+  .card .arrow { transition: transform .3s ease; }
+  .card:hover .arrow { transform: translateX(4px); }
+  .zoom img { transition: transform 1.2s cubic-bezier(.2,.7,.2,1); }
+  .zoom:hover img { transform: scale(1.04); }
+  .btn { transition: background-color .25s ease, color .25s ease, border-color .25s ease, transform .25s ease; }
+  .btn:active { transform: translateY(1px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Spațiu pentru bara fixă de pe mobil */
+@media (max-width: 767px) { body { padding-bottom: calc(4.25rem + env(safe-area-inset-bottom)); } }
+
+.prose-legal h2 { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 600; color: var(--color-navy); margin: 2.25rem 0 .6rem; }
+.prose-legal p, .prose-legal li { color: var(--color-muted); line-height: 1.75; }
+.prose-legal ul { list-style: disc; padding-left: 1.25rem; margin: .5rem 0; }
+.prose-legal a { color: var(--color-aur-text); text-decoration: underline; text-underline-offset: 3px; }
