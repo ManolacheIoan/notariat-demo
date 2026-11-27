@@ -1,4 +1,4 @@
-# Birou Notarial Ana Vlad — site demonstrativ
+# Birou Notarial Avalon — site demonstrativ
 
 Site demonstrativ realizat de **Manotek** pentru portofoliu. **Firma, persoana, adresa și datele de contact sunt fictive.** Pe fiecare pagină apare banda „Site demonstrativ realizat de Manotek — firmă fictivă”.
 

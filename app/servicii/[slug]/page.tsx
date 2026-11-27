@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const s = servicii.find((x) => x.slug === slug);
   if (!s) return {};
-  const description = `${s.scurt} Ce include și ce acte sunt necesare, pe scurt. Birou Notarial Ana Vlad, Galați (site demonstrativ).`;
+  const description = `${s.scurt} Ce include și ce acte sunt necesare, pe scurt. Birou Notarial Avalon, Galați (site demonstrativ).`;
   const url = `servicii/${s.slug}/`;
   return { title: s.titlu, description, alternates: { canonical: url }, openGraph: og(s.titlu, description, url) };
 }

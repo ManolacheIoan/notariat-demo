@@ -6,9 +6,9 @@
 export const EXEMPLU = "[exemplu]";
 
 export const site = {
-  nume: "Birou Notarial Ana Vlad",
-  numeScurt: "Notariat Ana Vlad",
-  notar: "Ana Vlad",
+  nume: "Birou Notarial Avalon",
+  numeScurt: "Notariat Avalon",
+  notar: "Notar public [exemplu]",
   oras: "Galați",
   slogan: "acte notariale clare, rapide și sigure",
   descriere:
@@ -61,7 +61,7 @@ export const nav = [
 
 export const hero = {
   supratitlu: "Birou notarial · Galați",
-  titlu: "Birou Notarial Ana Vlad",
+  titlu: "Birou Notarial Avalon",
   subtitlu: "Acte notariale clare, rapide și sigure.",
   text: "Vă explicăm fiecare pas pe înțelesul tuturor și vă trimitem din timp lista de acte. Ajungeți la birou pregătiți, semnați fără drumuri în plus.",
   repere: ["Listă de acte înainte de programare", "Explicații clare, fără termeni inutili", "Programare la ora stabilită"],
@@ -349,7 +349,7 @@ export const pasi = [
 
 export const despre = {
   titlu: "Despre notar",
-  nume: "Notar public Ana Vlad",
+  nume: "Notarul biroului [exemplu]",
   paragrafe: [
     "[exemplu] Notar public cu experiență în acte imobiliare, succesiuni și dreptul familiei. Lucrez cu atenție la detalii și cu explicații pe înțelesul fiecărui client.",
     "[exemplu] Cred că un act notarial bun începe cu o discuție clară: ce doriți să faceți, ce riscuri există și ce documente sunt necesare. Abia apoi trecem la redactare.",

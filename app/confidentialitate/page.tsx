@@ -3,7 +3,7 @@ import { Legal } from "@/components/Legal";
 import { site } from "@/content/site";
 import { og } from "@/lib";
 
-const description = "Cum prelucrează Birou Notarial Ana Vlad datele personale trimise prin site (text exemplu pentru un site demonstrativ).";
+const description = "Cum prelucrează Birou Notarial Avalon datele personale trimise prin site (text exemplu pentru un site demonstrativ).";
 export const metadata: Metadata = {
   title: "Politica de confidențialitate",
   description,

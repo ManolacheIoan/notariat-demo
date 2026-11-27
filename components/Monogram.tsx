@@ -1,4 +1,4 @@
-/** Monograma „AV”: A și V legate printr-un traseu comun, într-un chenar fin. Identitate proprie, fără însemne oficiale. */
+/** Monograma „AV” (Avalon): A și V legate printr-un traseu comun, într-un chenar fin. Identitate proprie, fără însemne oficiale. */
 export function Monogram({ className = "", title }: { className?: string; title?: string }) {
   return (
     <svg viewBox="0 0 48 48" className={className} role={title ? "img" : undefined} aria-hidden={title ? undefined : true} aria-label={title}>

@@ -31,7 +31,7 @@ function Hero() {
         <div className="lg:col-span-7">
           <p className="eyebrow">{hero.supratitlu}</p>
           <h1 id="hero-titlu" className="mt-6 font-serif text-[2.9rem] leading-[1.02] font-semibold tracking-tight text-navy sm:text-6xl lg:text-[4.6rem]">
-            {hero.titlu.replace("Ana Vlad", "Ana\u00a0Vlad")}
+            {hero.titlu}
             <span className="mt-3 block text-[0.62em] leading-[1.12] font-medium text-aur-text italic">
               — acte notariale clare, rapide și sigure
             </span>

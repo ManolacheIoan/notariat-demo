@@ -20,7 +20,7 @@ export function Logo({ onDark = false }: { onDark?: boolean }) {
     <span className="flex items-center gap-3">
       <Monogram className="mark h-10 w-10 shrink-0" />
       <span className="flex flex-col leading-none">
-        <span className={`font-serif text-[1.35rem] font-semibold tracking-tight ${onDark ? "text-hartie" : "text-navy"}`}>Ana Vlad</span>
+        <span className={`font-serif text-[1.35rem] font-semibold tracking-tight ${onDark ? "text-hartie" : "text-navy"}`}>Avalon</span>
         <span className={`mt-1 text-[10px] font-semibold tracking-[0.24em] uppercase ${onDark ? "text-aur-deschis" : "text-aur-text"}`}>Birou notarial</span>
       </span>
     </span>

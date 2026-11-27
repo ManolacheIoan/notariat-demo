@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Legal } from "@/components/Legal";
 import { og } from "@/lib";
 
-const description = "Ce cookie-uri folosește site-ul Birou Notarial Ana Vlad (text exemplu pentru un site demonstrativ).";
+const description = "Ce cookie-uri folosește site-ul Birou Notarial Avalon (text exemplu pentru un site demonstrativ).";
 export const metadata: Metadata = {
   title: "Politica de cookies",
   description,
