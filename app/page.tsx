@@ -30,8 +30,8 @@ function Hero() {
       <div className="container-x relative grid items-center gap-12 py-14 md:py-20 lg:grid-cols-12 lg:gap-10 lg:py-28 2xl:py-32">
         <div className="lg:col-span-7">
           <p className="eyebrow">{hero.supratitlu}</p>
-          <h1 id="hero-titlu" className="mt-6 font-serif text-[2.9rem] leading-[1.02] font-semibold tracking-tight text-navy sm:text-6xl lg:text-[4.6rem] 2xl:text-[5.25rem]">
-            {hero.titlu}
+          <h1 id="hero-titlu" className="mt-6 font-serif text-[2.9rem] leading-[1.02] font-semibold tracking-tight text-navy sm:text-6xl lg:text-[4.6rem]">
+            {hero.titlu.replace("Ana Vlad", "Ana\u00a0Vlad")}
             <span className="mt-3 block text-[0.62em] leading-[1.12] font-medium text-aur-text italic">
               — acte notariale clare, rapide și sigure
             </span>

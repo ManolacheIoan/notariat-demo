@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { site, servicii } from "@/content/site";
 import { SITE_URL } from "@/lib";
@@ -7,14 +7,22 @@ import { DemoBand, Header, MobileBar } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { RevealObserver } from "@/components/Reveal";
 
-// next/font descarcă fonturile la build și le servește de pe același domeniu.
-const inter = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-inter", display: "swap" });
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin", "latin-ext"],
-  weight: ["500", "600"],
-  style: ["normal", "italic"],
+// Fonturi locale, reduse la caracterele latine + diacriticele românești (ă â î ș ț), ca să fie mici și preîncărcate.
+// Sursa: Inter și Cormorant Garamond (SIL Open Font License), subsetate cu fonttools.
+const inter = localFont({
+  src: [{ path: "./fonts/inter.woff2", weight: "400 600", style: "normal" }],
+  variable: "--font-inter",
+  display: "swap",
+  fallback: ["system-ui", "Arial", "sans-serif"],
+});
+const cormorant = localFont({
+  src: [
+    { path: "./fonts/cormorant.woff2", weight: "500 600", style: "normal" },
+    { path: "./fonts/cormorant-italic.woff2", weight: "500", style: "italic" },
+  ],
   variable: "--font-cormorant",
   display: "swap",
+  fallback: ["Georgia", "serif"],
 });
 
 const titlu = `${site.nume} – notar public în ${site.oras}`;

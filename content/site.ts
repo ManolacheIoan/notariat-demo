@@ -46,7 +46,7 @@ export const site = {
   programNota: "Program orientativ [exemplu]. Pentru situații urgente (ex. deplasări la domiciliu sau în spital), sunați pentru o programare separată.",
   /** Endpoint Formspree real: "https://formspree.io/f/<id>". Placeholderul de mai jos activează modul demonstrativ. */
   formspree: "https://formspree.io/f/PLACEHOLDER",
-  agentie: { nume: "Manotek", url: "https://manolacheioan.github.io/johnmnl-portfolio/" },
+  agentie: { nume: "Manotek", url: "https://manolacheioan.github.io/" },
 };
 
 export const nav = [
@@ -409,7 +409,7 @@ export const intrebari = [
 
 export const intrebariNota = "Informațiile au caracter general și nu reprezintă consultanță juridică pentru un caz concret.";
 
-export const exemplu = [
+export const listaExemplu = [
   "Numele firmei și al notarului (fictive)",
   "Adresa: Str. Exemplu nr. 10, Galați",
   "Telefon 07XX XXX XXX și email contact@exemplu.ro",

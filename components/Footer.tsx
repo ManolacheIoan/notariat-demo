@@ -47,7 +47,7 @@ export function Footer() {
           <ul className="flex flex-wrap gap-x-6 gap-y-2">
             <li><Link href="/confidentialitate/" className="hover:text-aur-deschis">Confidențialitate</Link></li>
             <li><Link href="/cookies/" className="hover:text-aur-deschis">Cookies</Link></li>
-            <li>Realizat de <a href={site.agentie.url} className="text-aur-deschis hover:underline">{site.agentie.nume}</a></li>
+            <li>Realizat de <a href={site.agentie.url} className="text-aur-deschis underline underline-offset-2 hover:text-hartie">{site.agentie.nume}</a></li>
           </ul>
         </div>
       </div>

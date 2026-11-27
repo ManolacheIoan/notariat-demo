@@ -58,8 +58,8 @@ export function Header() {
         Sari la conținut
       </a>
       <div className="bar container-x flex items-center justify-between gap-6">
-        <Link href="/" aria-label={`${site.nume} – pagina principală`} className="shrink-0">
-          <Logo />
+        <Link href="/" className="shrink-0">
+          <Logo /><span className="sr-only"> – pagina principală</span>
         </Link>
         <nav aria-label="Navigare principală" className="hidden xl:block">
           <ul className="flex items-center gap-7 text-[14px] text-muted">
