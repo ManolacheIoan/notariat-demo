@@ -15,7 +15,7 @@ export const og = (title: string, description: string, url: string) => ({
 });
 
 /** Link „Sună”: numărul real dacă e configurat, altfel secțiunea Contact. */
-export const telHref = site.telefon.tel ? `tel:${site.telefon.tel}` : "/#contact";
+export const telHref = site.telefon.tel ? `tel:${site.telefon.tel}` : `${BASE}/#contact`;
 
 export const whatsappHref = (text: string) =>
   `https://wa.me/${site.whatsapp.numar}?text=${encodeURIComponent(text)}`;
